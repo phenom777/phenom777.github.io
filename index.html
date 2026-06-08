@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Arka Ghosh — Researcher in Intelligent Transportation Systems, Optimization & Machine Learning. DeustoTech, University of Deusto, Bilbao, Spain.">
+  <title>Dr. Arka Ghosh | Researcher in ITS & AI</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   STYLE — Dr. Arka Ghosh | Warm Academic Theme
+   ============================================================ */
+:root {
+  --cream:#FEFBF6; --cream-dark:#F5EFE2;
+  --amber:#F59E0B; --amber-light:#FDE68A; --amber-dark:#D97706;
+  --teal:#0D9488; --teal-light:#CCFBF1; --teal-dark:#0F766E;
+  --coral:#F97316; --coral-light:#FED7AA;
+  --navy:#1E3A5F; --navy-mid:#2E5082;
+  --ink:#1C1917; --ink-mid:#44403C; --ink-light:#78716C;
+  --white:#FFFFFF; --border:#E7DDD0;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --font-mono:'DM Mono','Courier New',monospace;
+  --section-gap:5rem;
+  --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --radius-xl:32px;
+  --shadow-xs:0 1px 3px rgba(28,25,23,.06);
+  --shadow-sm:0 2px 8px rgba(28,25,23,.08);
+  --shadow-md:0 4px 20px rgba(28,25,23,.10);
+  --shadow-lg:0 8px 40px rgba(28,25,23,.13);
+  --shadow-xl:0 20px 60px rgba(28,25,23,.16);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+a{color:var(--teal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--teal-dark)}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+
+/* NAV */
+#main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(254,251,246,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+#main-nav.scrolled{box-shadow:var(--shadow-md)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1180px;margin:0 auto;padding:0 1.5rem}
+.nav-brand{font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--navy);letter-spacing:-.01em}
+.nav-brand span{color:var(--teal)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--ink-mid);position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--teal);transition:width .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--teal)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+
+/* HERO */
+#hero{padding:120px 0 80px;background:linear-gradient(135deg,var(--cream) 0%,#EEF9F6 40%,#FEFCE8 100%);position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;top:-60px;right:-60px;width:480px;height:480px;background:radial-gradient(circle,rgba(13,148,136,.08) 0%,transparent 70%);pointer-events:none}
+#hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(245,158,11,.1) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--teal-light);color:var(--teal-dark);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;margin-bottom:1.25rem}
+.hero-name{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,3.6rem);font-weight:700;color:var(--navy);line-height:1.12;margin-bottom:.6rem}
+.hero-name em{font-style:italic;color:var(--teal)}
+.hero-title{font-size:1.05rem;color:var(--teal-dark);font-weight:500;margin-bottom:.4rem}
+.hero-affil{font-size:.925rem;color:var(--ink-light);margin-bottom:1.5rem}
+.hero-bio{font-size:.95rem;color:var(--ink-mid);line-height:1.7;max-width:600px;margin-bottom:2rem}
+.hero-metrics{display:flex;gap:2rem;margin-bottom:2rem}
+.metric{text-align:center}
+.metric-value{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--navy);line-height:1}
+.metric-label{font-size:.75rem;color:var(--ink-light);font-weight:500;margin-top:.2rem}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;border-radius:var(--radius-md);font-size:.875rem;font-weight:600;cursor:pointer;border:none;transition:all .22s ease;font-family:var(--font-body)}
+.btn-primary{background:var(--teal);color:var(--white);box-shadow:0 4px 14px rgba(13,148,136,.35)}
+.btn-primary:hover{background:var(--teal-dark);color:var(--white);transform:translateY(-2px);box-shadow:0 8px 20px rgba(13,148,136,.4)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--border)}
+.btn-outline:hover{background:var(--cream-dark);color:var(--navy);border-color:var(--navy);transform:translateY(-2px)}
+.hero-photo-card{position:relative}
+.hero-photo-wrap{width:100%;aspect-ratio:3/4;max-width:280px;margin:0 auto;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);background:linear-gradient(135deg,var(--teal-light),var(--amber-light));position:relative}
+.hero-photo-wrap img{width:100%;height:100%;object-fit:cover}
+.hero-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;color:var(--teal-dark);font-size:.85rem;font-weight:500}
+.hero-photo-placeholder svg{width:80px;height:80px;opacity:.4}
+.hero-contact-chips{display:flex;flex-direction:column;gap:.5rem;margin-top:1.25rem}
+.chip{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--ink-mid);background:var(--white);border-radius:var(--radius-md);padding:.45rem .8rem;box-shadow:var(--shadow-xs);border:1px solid var(--border)}
+.chip svg{width:14px;height:14px;color:var(--teal);flex-shrink:0}
+
+/* SECTIONS */
+.section{padding:var(--section-gap) 0}
+.section-alt{background:var(--white)}
+.section-warm{background:linear-gradient(180deg,var(--cream) 0%,#EEF9F7 100%)}
+.section-header{margin-bottom:3rem}
+.section-eyebrow{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.75rem,3.5vw,2.4rem);font-weight:700;color:var(--navy);line-height:1.2}
+.section-subtitle{font-size:.95rem;color:var(--ink-light);margin-top:.5rem;max-width:640px}
+
+/* STATS STRIP */
+.stats-strip{background:linear-gradient(135deg,var(--navy) 0%,var(--teal-dark) 100%);padding:3rem 0;color:var(--white)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.stat-item{padding:1rem}
+.stat-num{font-family:var(--font-display);font-size:2.6rem;font-weight:700;color:var(--amber-light);line-height:1}
+.stat-label{font-size:.8rem;opacity:.8;margin-top:.4rem;font-weight:500}
+.stat-sub{font-size:.7rem;opacity:.55;margin-top:.15rem}
+
+/* PUBLICATIONS */
+.pub-filter-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.filter-btn{padding:.4rem 1rem;border-radius:999px;font-size:.8rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:var(--white);color:var(--ink-mid);transition:all .2s;font-family:var(--font-body)}
+.filter-btn:hover,.filter-btn.active{background:var(--teal);color:var(--white);border-color:var(--teal)}
+.pub-list{display:flex;flex-direction:column;gap:1rem}
+.pub-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem 1.6rem;display:flex;gap:1.2rem;align-items:flex-start;transition:box-shadow .25s,transform .25s;position:relative;overflow:hidden}
+.pub-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:var(--radius-sm) 0 0 var(--radius-sm)}
+.pub-card.q1::before{background:var(--teal)}
+.pub-card.q2::before{background:var(--amber)}
+.pub-card.conf::before{background:var(--coral)}
+.pub-card.preprint::before{background:var(--ink-light)}
+.pub-card:hover{box-shadow:var(--shadow-md);transform:translateX(3px)}
+.pub-id-badge{font-family:var(--font-mono);font-size:.7rem;font-weight:500;color:var(--ink-light);background:var(--cream-dark);padding:.2rem .55rem;border-radius:var(--radius-sm);white-space:nowrap;margin-top:.15rem;flex-shrink:0}
+.pub-body{flex:1;min-width:0}
+.pub-title{font-size:.925rem;font-weight:600;color:var(--navy);line-height:1.45;margin-bottom:.4rem}
+.pub-authors{font-size:.82rem;color:var(--ink-light);line-height:1.5;margin-bottom:.5rem}
+.pub-authors .me{color:var(--teal-dark);font-weight:600;background:var(--teal-light);padding:0 .3rem;border-radius:3px}
+.pub-meta-row{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.pub-journal{font-size:.8rem;font-style:italic;color:var(--ink-mid);font-weight:500}
+.badge{display:inline-flex;align-items:center;gap:.25rem;font-size:.7rem;font-weight:700;padding:.18rem .6rem;border-radius:999px}
+.badge-q1{background:#CCFBF1;color:#0F766E}
+.badge-q2{background:#FEF9C3;color:#A16207}
+.badge-d1{background:#E0F2FE;color:#0369A1}
+.badge-conf{background:#FFEDD5;color:#C2410C}
+.badge-core{background:#EDE9FE;color:#6D28D9}
+.badge-review{background:#F1F5F9;color:#64748B}
+.badge-revision{background:#FEF3C7;color:#92400E}
+.badge-accepted{background:#DCFCE7;color:#166534}
+.badge-inpress{background:#D1FAE5;color:#065F46}
+.pub-if{font-size:.75rem;color:var(--ink-light)}
+.pub-doi-link{font-size:.75rem;color:var(--teal);display:inline-flex;align-items:center;gap:.25rem;font-weight:500}
+.pub-year-marker{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--amber-dark);margin:1.5rem 0 .6rem;padding-left:1rem;border-left:3px solid var(--amber)}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+.project-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .3s,transform .3s;display:flex;flex-direction:column}
+.project-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.project-header{padding:1.6rem 1.6rem 1rem;position:relative}
+.project-accent-bar{height:4px;border-radius:var(--radius-sm);margin-bottom:1.2rem}
+.project-acronym{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.25rem}
+.project-fullname{font-size:.82rem;color:var(--ink-light);line-height:1.4}
+.project-meta-pills{display:flex;flex-wrap:wrap;gap:.4rem;padding:.6rem 1.6rem}
+.pill{font-size:.72rem;font-weight:600;padding:.2rem .7rem;border-radius:999px;background:var(--cream-dark);color:var(--ink-mid)}
+.project-body{padding:1rem 1.6rem;flex:1}
+.project-abstract{font-size:.875rem;color:var(--ink-mid);line-height:1.65}
+.project-footer{padding:1rem 1.6rem 1.4rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.75rem}
+.project-topics{display:flex;flex-wrap:wrap;gap:.4rem}
+.topic-tag{font-size:.7rem;background:var(--teal-light);color:var(--teal-dark);padding:.15rem .55rem;border-radius:999px;font-weight:500}
+.project-linked-pubs{font-size:.8rem}
+.project-linked-pubs-label{font-weight:600;color:var(--ink-mid);margin-bottom:.3rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.pub-ref-chip{display:inline-flex;align-items:center;gap:.25rem;font-family:var(--font-mono);font-size:.7rem;background:var(--cream-dark);color:var(--teal-dark);padding:.15rem .5rem;border-radius:var(--radius-sm);margin:.15rem .15rem 0 0;cursor:pointer;border:1px solid var(--border);transition:all .2s}
+.pub-ref-chip:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
+.project-website-link{font-size:.8rem;display:inline-flex;align-items:center;gap:.3rem;color:var(--teal);font-weight:500}
+
+/* STUDENTS */
+.students-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:1.5rem}
+.student-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .3s,transform .3s}
+.student-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.student-header{padding:1.5rem 1.5rem 1.2rem;display:flex;gap:1.2rem;align-items:flex-start;background:linear-gradient(135deg,#EEF9F6 0%,#FEFCE8 100%)}
+.student-photo{width:72px;height:72px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,var(--teal-light),var(--amber-light));flex-shrink:0;box-shadow:var(--shadow-sm);border:3px solid var(--white);display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.student-photo img{width:100%;height:100%;object-fit:cover}
+.student-name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--navy)}
+.student-degree{font-size:.78rem;color:var(--teal-dark);font-weight:600;margin-top:.2rem}
+.student-inst{font-size:.75rem;color:var(--ink-light);margin-top:.2rem}
+.student-body{padding:1.2rem 1.5rem}
+.student-field-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem 1rem;margin-bottom:1rem}
+.student-field label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-light);display:block;margin-bottom:.2rem}
+.student-field span{font-size:.82rem;color:var(--ink-mid);font-weight:500}
+.student-thesis{font-size:.82rem;font-style:italic;color:var(--navy);font-family:var(--font-display);font-weight:600;border-left:3px solid var(--teal);padding-left:.75rem;margin-bottom:.85rem;line-height:1.4}
+.student-abstract{font-size:.82rem;color:var(--ink-mid);line-height:1.65}
+.student-footer{padding:1rem 1.5rem 1.3rem;border-top:1px solid var(--border)}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(180deg,var(--teal) 0%,var(--amber) 100%);border-radius:2px}
+.timeline-item{position:relative;padding-bottom:1.75rem}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-dot{position:absolute;left:-1.55rem;top:.3rem;width:14px;height:14px;background:var(--white);border:2.5px solid var(--teal);border-radius:50%;transition:all .2s}
+.timeline-item:hover .timeline-dot{background:var(--teal);transform:scale(1.2)}
+.timeline-item.current .timeline-dot{background:var(--teal);box-shadow:0 0 0 4px rgba(13,148,136,.2)}
+.timeline-period{font-size:.72rem;font-weight:700;color:var(--amber-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.25rem}
+.timeline-role{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.15rem}
+.timeline-sub{font-size:.82rem;color:var(--teal-dark);font-weight:500}
+.timeline-inst{font-size:.8rem;color:var(--ink-light);margin-top:.1rem}
+
+/* INTERESTS */
+.interests-cloud{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.interest-tag{font-size:.8rem;font-weight:500;padding:.4rem .95rem;border-radius:999px;background:var(--white);border:1.5px solid var(--border);color:var(--ink-mid);transition:all .2s;cursor:default}
+.interest-tag:hover{background:var(--teal);color:var(--white);border-color:var(--teal);transform:translateY(-2px)}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.skill-group-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-light);margin-bottom:1rem}
+.skill-bar-item{margin-bottom:1rem}
+.skill-bar-label{display:flex;justify-content:space-between;font-size:.82rem;font-weight:500;color:var(--ink-mid);margin-bottom:.4rem}
+.skill-bar-track{height:8px;background:var(--cream-dark);border-radius:999px;overflow:hidden}
+.skill-bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--teal) 0%,var(--teal-dark) 100%);width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+
+/* SERVICE */
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem}
+.service-card-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:.85rem}
+.service-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.service-list li{font-size:.85rem;color:var(--ink-mid);display:flex;align-items:flex-start;gap:.5rem}
+.service-list li::before{content:'›';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:.05rem}
+
+/* CONTACT */
+#contact{background:linear-gradient(135deg,#0D3348 0%,#0F766E 100%);color:var(--white);padding:5rem 0 3rem}
+#contact .section-eyebrow{color:var(--amber-light)}
+#contact .section-title{color:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem}
+.contact-info-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.contact-info-item{display:flex;align-items:center;gap:.85rem;font-size:.9rem}
+.contact-info-item svg{width:20px;height:20px;color:var(--amber-light);flex-shrink:0}
+.contact-links-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.contact-link-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-lg);padding:1rem 1.1rem;display:flex;align-items:center;gap:.75rem;color:var(--white);transition:all .2s;font-size:.85rem;font-weight:500}
+.contact-link-card:hover{background:rgba(255,255,255,.16);color:var(--white);transform:translateY(-2px)}
+.contact-link-card svg{width:20px;height:20px;color:var(--amber-light)}
+footer{background:#091F2B;color:rgba(255,255,255,.45);text-align:center;padding:1.5rem;font-size:.75rem}
+
+/* BACK TO TOP */
+#back-top{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:var(--teal);color:var(--white);border:none;cursor:pointer;box-shadow:var(--shadow-md);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);transition:all .3s;z-index:999}
+#back-top.visible{opacity:1;transform:translateY(0)}
+#back-top:hover{background:var(--teal-dark);transform:translateY(-2px)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .6s ease both}
+.fade-up-1{animation-delay:.1s}.fade-up-2{animation-delay:.2s}
+.fade-up-3{animation-delay:.3s}.fade-up-4{animation-delay:.4s}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.pub-card.ring{box-shadow:0 0 0 3px var(--teal),var(--shadow-md)!important}
+
+/* TWO-COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo-card{order:-1}
+  .hero-photo-wrap{max-width:180px;aspect-ratio:1/1;border-radius:50%}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr;gap:2rem}
+  .contact-grid{grid-template-columns:1fr;gap:2rem}
+  .service-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;gap:.5rem;position:absolute;top:64px;left:0;right:0;background:var(--cream);padding:1rem 1.5rem;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md)}
+  .nav-hamburger{display:flex}
+  #main-nav{position:relative}
+  #hero{padding:2.5rem 0 2rem}
+  .hero-metrics{gap:1.5rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:1fr}
+  .students-grid{grid-template-columns:1fr}
+  .contact-links-grid{grid-template-columns:1fr}
+  .student-field-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-brand">Dr. <span>Arka Ghosh</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#students">Students</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge fade-up">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>
+          Post-Doctoral Researcher · Bilbao, Spain
+        </div>
+        <h1 class="hero-name fade-up fade-up-1" id="hero-name">Dr. <em>Arka Ghosh</em></h1>
+        <div class="hero-title fade-up fade-up-2" id="hero-title"></div>
+        <div class="hero-affil fade-up fade-up-2" id="hero-affil"></div>
+        <p class="hero-bio fade-up fade-up-3" id="hero-bio"></p>
+        <div class="hero-metrics fade-up fade-up-3">
+          <div class="metric"><div class="metric-value" id="metric-hindex">14</div><div class="metric-label">h-index</div></div>
+          <div class="metric"><div class="metric-value" id="metric-citations">643</div><div class="metric-label">Citations</div></div>
+          <div class="metric"><div class="metric-value" id="metric-pubs">21</div><div class="metric-label">Publications</div></div>
+        </div>
+        <div class="hero-ctas fade-up fade-up-4">
+          <a class="btn btn-primary" href="#publications">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            View Publications
+          </a>
+          <a class="btn btn-outline" href="#projects">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Research Projects
+          </a>
+          <a class="btn btn-outline" href="mailto:arka.ghosh@deusto.es">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo-card fade-up fade-up-3">
+        <div class="hero-photo-wrap" id="hero-photo-wrap">
+          <div class="hero-photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <span>Your Photo Here</span>
+          </div>
+        </div>
+        <div class="hero-contact-chips" id="hero-chips"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num" id="stat-hindex">14</div><div class="stat-label">h-index</div><div class="stat-sub">Google Scholar</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-citations">643</div><div class="stat-label">Total Citations</div><div class="stat-sub">2017 – Present</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-q1">7</div><div class="stat-label">JCR Q1/D1 Journals</div><div class="stat-sub">Clarivate Ranked</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-conf">4</div><div class="stat-label">CORE Conferences</div><div class="stat-sub">Ranked International</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="section-header"><div class="section-eyebrow">About Me</div><h2 class="section-title">Background &amp; Expertise</h2></div>
+    <div class="two-col">
+      <div class="reveal">
+        <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--navy);margin-bottom:1.5rem;">Work Experience</h3>
+        <div class="timeline" id="experience-timeline"></div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--navy);margin-bottom:1.5rem;">Education</h3>
+        <div class="timeline" id="education-timeline"></div>
+      </div>
+    </div>
+    <div style="margin-top:3rem;" class="reveal">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--navy);margin-bottom:.5rem;">Research Interests</h3>
+      <p style="font-size:.875rem;color:var(--ink-light);margin-bottom:.5rem;">Hover to explore</p>
+      <div class="interests-cloud" id="interests-cloud"></div>
+    </div>
+    <div style="margin-top:3rem;" class="reveal">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--navy);margin-bottom:1.75rem;">Technical Proficiency</h3>
+      <div class="skills-grid">
+        <div><div class="skill-group-title">Programming Languages</div><div id="skills-prog"></div></div>
+        <div><div class="skill-group-title">Software Tools &amp; Frameworks</div><div id="skills-tools"></div></div>
+      </div>
+    </div>
+    <div style="margin-top:3rem;" class="reveal">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--navy);margin-bottom:1.25rem;">Academic Service</h3>
+      <div class="service-grid">
+        <div class="service-card"><div class="service-card-title">Journal Reviewer</div><ul class="service-list" id="service-journals"></ul></div>
+        <div class="service-card"><div class="service-card-title">Conference Reviewer / TPC</div><ul class="service-list" id="service-confs"></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Peer-Reviewed Research</div>
+      <h2 class="section-title">Publications</h2>
+      <p class="section-subtitle">Author name <span style="background:var(--teal-light);color:var(--teal-dark);padding:0 .4rem;border-radius:3px;font-weight:600;">highlighted</span> indicates Dr. Ghosh. JCR impact factors and quartiles per publication year.</p>
+    </div>
+    <div class="pub-filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="journal">Journal Articles</button>
+      <button class="filter-btn" data-filter="conference">Conference Papers</button>
+      <button class="filter-btn" data-filter="preprint">Preprints &amp; Under Review</button>
+    </div>
+    <div class="pub-list" id="pub-list"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Horizon Europe</div>
+      <h2 class="section-title">Research Projects</h2>
+      <p class="section-subtitle">Funded research projects with roles, abstracts, linked publications, and topics.</p>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- STUDENTS -->
+<section id="students" class="section section-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Mentoring</div>
+      <h2 class="section-title">PhD Students</h2>
+      <p class="section-subtitle">Supervised doctoral candidates — thesis topics, timeline, funding, and linked research outputs.</p>
+    </div>
+    <div class="students-grid" id="students-grid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header"><div class="section-eyebrow">Get In Touch</div><h2 class="section-title">Contact</h2></div>
+    <div class="contact-grid">
+      <ul class="contact-info-list">
+        <li class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:arka.ghosh@deusto.es" id="contact-email" style="color:rgba(255,255,255,.85)">arka.ghosh@deusto.es</a>
+        </li>
+        <li class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.03 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+          <span>+34 618 327 534</span>
+        </li>
+        <li class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>DeustoTech, University of Deusto, Bilbao, Spain</span>
+        </li>
+        <li class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <span>ORCID: 0000-0002-9479-2250</span>
+        </li>
+      </ul>
+      <div class="contact-links-grid">
+        <a class="contact-link-card" href="https://scholar.google.com/" target="_blank" rel="noopener" id="contact-scholar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          Google Scholar
+        </a>
+        <a class="contact-link-card" href="https://orcid.org/0000-0002-9479-2250" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          ORCID Profile
+        </a>
+        <a class="contact-link-card" href="mailto:arka.ghosh@deusto.es">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Me
+        </a>
+        <a class="contact-link-card" href="https://www.deusto.es" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+          DeustoTech
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="footer-year"></span> Dr. Arka Ghosh · DeustoTech, University of Deusto · Bilbao, Spain</p>
+  <p style="margin-top:.4rem;font-size:.7rem;opacity:.6;">ORCID: 0000-0002-9479-2250</p>
+</footer>
+
+<button id="back-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// ============================================================
+// SITE DATA — edit this to update all content
+// ============================================================
+const SITE_DATA = {
+  personal: {
+    name:"Dr. Arka Ghosh",
+    title:"Associate Researcher (Post-Doctoral)",
+    affiliation:"DeustoTech, University of Deusto",
+    location:"Bilbao, Spain",
+    email:"arka.ghosh@deusto.es",
+    phone:"+34 618 327 534",
+    googleScholar:"https://scholar.google.com/", // UPDATE with your real URL
+    orcid:"https://orcid.org/0000-0002-9479-2250",
+    hIndex:14, totalCitations:643,
+    bio:"My research focuses on optimization, machine learning, and artificial intelligence, with strong theoretical and applied contributions to Intelligent Transportation Systems (ITS). I have published in leading journals including IEEE Transactions on Cybernetics, Pattern Recognition, and Swarm and Evolutionary Computation, contributing advances in differential evolution, adversarial machine learning, and noise-resilient optimization. My applied research is consolidated through Horizon Europe projects (TANGENT, CONDUCTOR, SYNCHROMODE), where I developed model-based optimization tools for dynamic routing, congestion pricing, and multimodal signal control.",
+    headshot:"" // Set to "headshot.jpg" once you add your photo
+  },
+  education:[
+    {degree:"Ph.D. in Computer Science and Technology",institution:"IIEST Shibpur",country:"India",year:"2021",icon:"🎓"},
+    {degree:"M.Tech. in Computer Science",institution:"IIEST Shibpur",country:"India",year:"2015",grade:"3/4",icon:"📚"},
+    {degree:"B.Tech. in Computer Science and Engineering",institution:"West Bengal University of Technology",country:"India",year:"2012",grade:"8.05/10",icon:"🏛️"}
+  ],
+  experience:[
+    {role:"Associate Researcher (Post-Doctoral)",area:"Intelligent Transportation Systems",institution:"DeustoTech, University of Deusto",location:"Bilbao, Spain",period:"2021 – Present",current:true},
+    {role:"Assistant Professor",area:"Computer Science & Engineering",institution:"Bennett University",location:"India",period:"2021",current:false},
+    {role:"Researcher",area:"Evolutionary Machine Learning",institution:"Indian Statistical Institute",location:"Kolkata, India",period:"2014 – 2017",current:false}
+  ],
+  interests:["Intelligent Transportation Systems","Connected & Autonomous Vehicles","Traffic Signal Optimization","Dynamic Routing & Congestion Pricing","Bayesian Optimization","Graph Neural Networks","Surrogate Modeling","Explainable AI","Evolutionary & Black-Box Optimization","Adversarial Machine Learning"],
+  pubStats:{q1d1:7,q2:3,conferences:4},
+  journalPubs:[
+    {id:"J1",authors:["Blessing Itoro Afolayan","Arka Ghosh","Jenny Fajardo Calderin","Antonio D. Masegosa Arredondo"],title:"Emerging Trends in Machine Learning Assisted Optimization Techniques Across Intelligent Transportation Systems",journal:"IEEE Access",year:2024,doi:"10.1109/ACCESS.2024.3501775",jcrQuartile:"Q2",impactFactor:3.4,status:"published"},
+    {id:"J2",authors:["Erick Rodriguez-Esparza","Oscar Ramos-Soto","Antonio D. Masegosa","Enrique Onieva","Diego Oliva","Ander Arriandiaga","Arka Ghosh"],title:"Optimizing Road Traffic Surveillance: A Robust Hyper-Heuristic Approach for Vehicle Segmentation",journal:"IEEE Access",year:2024,volume:"12",pages:"29503–29524",doi:"10.1109/ACCESS.2024.3369039",jcrQuartile:"Q2",impactFactor:3.4,status:"published"},
+    {id:"J3",authors:["Arka Ghosh","Swagatam Das","Asit Kumar Das","Roman Senkerik","Adam Viktorin","Ivan Zelinka","Antonio David Masegosa"],title:"Using Spatial Neighborhoods for Parameter Adaptation: An Improved Success History Based Differential Evolution",journal:"Swarm and Evolutionary Computation",year:2022,volume:"71",pages:"101057",doi:"10.1016/j.swevo.2022.101057",jcrQuartile:"Q1",impactFactor:10.0,status:"published"},
+    {id:"J4",authors:["Arka Ghosh","Sankha Subhra Mullick","Shounak Datta","Swagatam Das","Asit Kumar Das","Rammohan Mallipeddi"],title:"A Black-Box Adversarial Attack Strategy with Adjustable Sparsity and Generalizability for Deep Image Classifiers",journal:"Pattern Recognition",year:2022,volume:"122",pages:"108279",doi:"10.1016/j.patcog.2021.108279",jcrQuartile:"Q1",impactFactor:8.0,status:"published"},
+    {id:"J5",authors:["Arka Ghosh","Swagatam Das","Asit Kumar Das"],title:"A Simple Two-Phase Differential Evolution for Improved Global Numerical Optimization",journal:"Soft Computing",year:2020,volume:"24",issue:"8",pages:"6151–6167",doi:"10.1007/s00500-020-04750-w",jcrQuartile:"Q1",impactFactor:4.1,status:"published"},
+    {id:"J6",authors:["Asit Kumar Das","Soumen Kumar Pati","Arka Ghosh"],title:"Relevant Feature Selection and Ensemble Classifier Design Using Bi-objective Genetic Algorithm",journal:"Knowledge and Information Systems",year:2020,volume:"62",issue:"2",pages:"423–455",doi:"10.1007/s10115-019-01341-6",jcrQuartile:"Q1",impactFactor:2.7,status:"published"},
+    {id:"J7",authors:["Arka Ghosh","Swagatam Das","Asit Kr Das","Liang Gao"],title:"Reusing the Past Difference Vectors in Differential Evolution — A Simple but Significant Improvement",journal:"IEEE Transactions on Cybernetics",year:2019,volume:"50",issue:"11",pages:"4821–4834",doi:"10.1109/TCYB.2019.2921602",jcrQuartile:"Q1",jcrD1:true,impactFactor:11.8,status:"published"},
+    {id:"J8",authors:["Arka Ghosh","Swagatam Das","Rammohan Mallipeddi","Asit Kumar Das","Subhransu Sekhar Dash"],title:"A Modified Differential Evolution with Distance-Based Selection for Continuous Optimization in Presence of Noise",journal:"IEEE Access",year:2017,volume:"5",pages:"26944–26964",doi:"10.1109/ACCESS.2017.2773825",jcrQuartile:"Q1",impactFactor:3.4,status:"published"},
+    {id:"J9",authors:["Arka Ghosh","Swagatam Das","Sankha Subhra Mullick","Rammohan Mallipeddi","Asit Kumar Das"],title:"A Switched Parameter Differential Evolution with Optional Blending Crossover for Scalable Numerical Optimization",journal:"Applied Soft Computing",year:2017,volume:"57",pages:"329–352",doi:"10.1016/j.asoc.2017.03.003",jcrQuartile:"Q1",impactFactor:8.7,status:"published"},
+    {id:"J10",authors:["Asit Kumar Das","Sunanda Das","Arka Ghosh"],title:"Ensemble Feature Selection Using Bi-objective Genetic Algorithm",journal:"Knowledge-Based Systems",year:2017,volume:"123",pages:"116–127",doi:"10.1016/j.knosys.2017.02.013",jcrQuartile:"Q1",impactFactor:8.8,status:"published"}
+  ],
+  conferencePubs:[
+    {id:"C1",authors:["Arka Ghosh","Antonio D. Masegosa"],title:"Stability and Limitations of Deep Neural Network Surrogates in Differential Evolution",venue:"IEEE Congress on Evolutionary Computation, IEEE WCCI",year:2026,status:"accepted",coreRank:"A"},
+    {id:"C2",authors:["Samra Sarwar","Arka Ghosh","Farhan Butt","Blessing Itoro Afolayan","Antonio David Masegosa"],title:"Evaluation of superblock configuration in an urban network with agent-based and traffic simulation models: A case study of Fort Worth, Texas",venue:"Transport Research Arena (TRA)",year:2025,status:"accepted"},
+    {id:"C3",authors:["Blessing Itoro Afolayan","Arka Ghosh","Samra Sarwar","Antonio D. Masegosa","Jenny F. Calderin"],title:"Optimization of Traffic Signals Using Bayesian Optimization in a Multi-Step Prompt Engineering Method",venue:"28th IEEE International Conference on Intelligent Transportation Systems (ITSC)",year:2025,presentation:"Oral",status:"in press",coreRank:"A"},
+    {id:"C4",authors:["Arka Ghosh","Samra Sarwar","Antonio D. Masegosa","Ander Arriandiaga","Marios Giouroukelis","Charis Chalkiadakis","Eleni Mantouka","Eleni Vlahogianni","Athina Tympakianaki"],title:"Optimization of Dynamic Congestion Pricing Strategy: A Case Study of Athens City",venue:"International Conference on Transportation & Development (ICTD), ASCE",year:2025,doi:"10.1061/9780784486207.057",status:"published"},
+    {id:"C5",authors:["Antonio D. Masegosa","Arka Ghosh","Samra Sarwar","Jenny Fajardo Calderin","Itziar Salaberria Larrauri","Marios Giouroukelis","Charis Chalkiadakis","Eleni Mantouka","Eleni Vlahogianni"],title:"Demand Responsive Transport and Transit Synchronization Using Adaptive Large Neighborhood Search",venue:"International Conference on Transportation & Development (ICTD), ASCE",year:2025,doi:"10.1061/9780784486191.067",status:"published"},
+    {id:"C6",authors:["Arka Ghosh","Juan A. Zapata","Antonio D. Masegosa","Ander Arriandiaga"],title:"A Taxonomy of Signal Vehicle Coupled Control from a Mathematical Programming Perspective",venue:"26th IEEE International Conference on Intelligent Transportation Systems (ITSC)",year:2023,doi:"10.1109/ITSC57777.2023.10422022",presentation:"Oral",status:"published",coreRank:"A"},
+    {id:"C7",authors:["Arka Ghosh","Bing Xue","Mengjie Zhang"],title:"Binary Differential Evolution Based Feature Selection Method with Mutual Information for Imbalanced Classification Problems",venue:"IEEE Congress on Evolutionary Computation (CEC)",year:2021,doi:"10.1109/CEC45853.2021.9504882",presentation:"Oral",status:"published"},
+    {id:"C8",authors:["Arka Ghosh","Rammohan Mallipeddi","Swagatam Das","Asit Kr Das"],title:"A Switched Parameter Differential Evolution with Multi-Donor Mutation and Annealing-Based Local Search for Optimization of Lennard–Jones Atomic Clusters",venue:"IEEE Congress on Evolutionary Computation (CEC)",year:2018,doi:"10.1109/CEC.2018.8477991",presentation:"Oral",status:"published"},
+    {id:"C9",authors:["Arka Ghosh","Swagatam Das","Bijaya Ketan Panigrahi","Asit Kr Das"],title:"A Noise Resilient Differential Evolution with Improved Parameter and Strategy Control",venue:"IEEE Congress on Evolutionary Computation (CEC)",year:2017,doi:"10.1109/CEC.2017.7969620",presentation:"Oral",status:"published"},
+    {id:"C10",authors:["Sunanda Das","Arka Ghosh","Asit Kumar Das"],title:"A Neighbourhood Based Hybrid Genetic Search Model for Feature Selection",venue:"International Conference on Swarm, Evolutionary, and Memetic Computing, Springer",year:2014,doi:"10.1007/978-3-319-20294-5_37",presentation:"Oral",status:"published"},
+    {id:"C11",authors:["Soumen Kumar Pati","Asit Kumar Das","Arka Ghosh"],title:"Gene Selection Using Multi-Objective Genetic Algorithm Integrating Cellular Automata and Rough Set Theory",venue:"International Conference on Swarm, Evolutionary, and Memetic Computing, Springer",year:2013,doi:"10.1007/978-3-319-03756-1_13",presentation:"Oral",status:"published"}
+  ],
+  preprintPubs:[
+    {id:"PP1",authors:["Blessing Itoro Afolayan","Arka Ghosh","Antonio D. Masegosa","Jenny F. Calderin"],title:"Explainable and Fast Graph Attention Surrogate for Traffic Simulation",journal:"IEEE Transactions on Intelligent Transportation Systems",status:"under-review"},
+    {id:"PP2",authors:["Blessing Itoro Afolayan","Arka Ghosh","Santhanakrishnan Narayanan","Constantinos Antoniou","Antonio D. Masegosa","Jenny F. Calderin"],title:"GSPINN: A Graph Sequential Physics-Informed Surrogate for Trip Travel Time Prediction",journal:"Communications in Transportation Research",status:"minor-revision"},
+    {id:"PP3",authors:["Arka Ghosh","Samra Sarwar","Athina Tympakianaki","Farhan Butt","Antonio D. Masegosa"],title:"Dynamic Route Distribution of Connected and Automated Vehicles Using Bayesian Optimization",journal:"Elsevier Transportation Research Interdisciplinary Perspectives",status:"under-review"},
+    {id:"PP4",authors:["Arka Ghosh","Samra Sarwar","Gabriel Duflo","Antonio D. Masegosa"],title:"From Latent Spaces to Traffic Theory: An Unsupervised Graph Learning Framework for Disruption Scenario Clustering",venue:"2026 IEEE 29th ITSC",status:"under-review"}
+  ],
+  projects:[
+    {id:"tangent",acronym:"TANGENT",fullName:"Traffic and Mobility Planning Enhanced with Digital Twins",funding:"Horizon Europe",budget:"€4.8M",period:"2021–2024",role:"Researcher & Task Leader (WP5.1)",abstract:"TANGENT developed digital twin technologies and optimization frameworks for traffic and mobility planning. The project focused on real-time dynamic routing, congestion pricing strategies, and public transport optimization across multiple European city case studies. Dr. Ghosh contributed novel metaheuristic optimization engines and surrogate modelling tools for large-scale traffic network control.",topics:["Dynamic Routing","Congestion Pricing","Public Transport","Digital Twins"],color:"#2563eb",website:"https://tangent-project.eu/",linkedPublications:["J3","J4","C6"]},
+    {id:"conductor",acronym:"CONDUCTOR",fullName:"Connected and Autonomous Vehicle Routing",funding:"Horizon Europe",budget:"€4.5M",period:"2022–2025",role:"Researcher & Principal Investigator (2025)",abstract:"CONDUCTOR addressed the challenge of dynamically routing connected and automated vehicles (CAVs) in mixed urban traffic. Dr. Ghosh led WP3 on dynamic routing optimization and served as Principal Investigator during the project's final phase. Key innovations include Bayesian optimization frameworks for real-time route distribution and integration with SUMO and Aimsun Next.",topics:["Connected Vehicles","Dynamic Routing","Bayesian Optimization","CAVs"],color:"#16a34a",website:"#",linkedPublications:["PP3","C4","C6"]},
+    {id:"synchromode",acronym:"SYNCHROMODE",fullName:"Synchronised Multimodal Urban Transport Optimization",funding:"Horizon Europe",budget:"€4.5M",period:"2023–2026",role:"Researcher & WP5 Contributor",abstract:"SYNCHROMODE targets synchronization of multimodal urban transport networks — integrating demand-responsive transport, signal control, and transit coordination. Dr. Ghosh contributed to the project proposal and leads optimization tasks in WP5, including graph-based surrogate models for multi-modal traffic state prediction.",topics:["Multimodal Transport","Signal Control","Graph Neural Networks","DRT"],color:"#dc2626",website:"#",linkedPublications:["C5","PP4","C3"]}
+  ],
+  phdStudents:[
+    {id:"blessing",name:"Blessing Itoro Afolayan",photo:"",thesisTopic:"Machine Learning-Based Optimization in Intelligent Transportation Systems",startYear:2023,expectedCompletion:2026,fundingAgency:"University of Deusto / Horizon Europe",institution:"DeustoTech, University of Deusto, Bilbao, Spain",abstract:"This thesis investigates the integration of machine learning techniques — particularly graph neural networks, surrogate models, and Bayesian optimization — with classical metaheuristic optimization to address computationally expensive traffic management problems. Key contributions include explainable graph attention surrogates for traffic simulation and physics-informed sequential models for travel time prediction.",linkedPublications:["J1","J2","C3","PP1","PP2"]}
+  ],
+  service:{
+    journals:["IEEE Transactions on Intelligent Transportation Systems","IEEE Transactions on Cybernetics","Pattern Recognition","Swarm and Evolutionary Computation","Knowledge-Based Systems"],
+    conferences:["IEEE ITSC","GECCO"]
+  },
+  skills:{
+    programming:[{name:"Python",level:60},{name:"MATLAB",level:30},{name:"Other",level:10}],
+    tools:[{name:"Aimsun Next & SUMO",level:60},{name:"PyTorch & TensorFlow",level:25},{name:"Git & Docker",level:15}]
+  }
+};
+
+// ============================================================
+// RENDER ENGINE
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // Nav
+  const nav = document.getElementById('main-nav');
+  const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.nav-hamburger');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+    highlightNav();
+  });
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  document.getElementById('back-top').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+  function highlightNav() {
+    let current = '';
+    document.querySelectorAll('section[id]').forEach(s => { if(window.scrollY >= s.offsetTop - 100) current = s.id; });
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+current));
+  }
+
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); animateBars(e.target); } });
+  }, {threshold:0.08});
+
+  function animateBars(el) {
+    el.querySelectorAll('.skill-bar-fill').forEach(b => b.style.width = b.dataset.w);
+  }
+
+  // Helpers
+  function authors(arr) {
+    return arr.map(a => a.toLowerCase().includes('arka ghosh') ? `<span class="me">${a}</span>` : a).join(', ');
+  }
+  function badges(pub) {
+    let h = '';
+    if(pub.jcrQuartile) h += `<span class="badge badge-${pub.jcrQuartile.toLowerCase()}">JCR ${pub.jcrQuartile}</span>`;
+    if(pub.jcrD1) h += `<span class="badge badge-d1">D1</span>`;
+    if(pub.impactFactor) h += `<span class="pub-if">IF ${pub.impactFactor.toFixed(1)}</span>`;
+    const sm = {['under-review']:'review',['minor-revision']:'revision',['accepted']:'accepted',['in press']:'inpress'};
+    if(sm[pub.status]) h += `<span class="badge badge-${sm[pub.status]}">${pub.status==='under-review'?'Under Review':pub.status==='minor-revision'?'Minor Revision':pub.status==='accepted'?'Accepted':'In Press'}</span>`;
+    if(pub.coreRank) h += `<span class="badge badge-core">CORE ${pub.coreRank}</span>`;
+    if(pub.presentation) h += `<span class="badge badge-conf">${pub.presentation} Presentation</span>`;
+    return h;
+  }
+  function doi(d) {
+    if(!d) return '';
+    return `<a class="pub-doi-link" href="https://doi.org/${d}" target="_blank">↗ DOI</a>`;
+  }
+
+  // Hero
+  const p = SITE_DATA.personal;
+  document.getElementById('hero-title').textContent = p.title;
+  document.getElementById('hero-affil').textContent = p.affiliation + ', ' + p.location;
+  document.getElementById('hero-bio').textContent = p.bio;
+  document.getElementById('metric-hindex').textContent = p.hIndex;
+  document.getElementById('metric-citations').textContent = p.totalCitations;
+  document.getElementById('metric-pubs').textContent = SITE_DATA.journalPubs.length + SITE_DATA.conferencePubs.length;
+  document.getElementById('stat-hindex').textContent = p.hIndex;
+  document.getElementById('stat-citations').textContent = p.totalCitations;
+  document.getElementById('hero-chips').innerHTML = `
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:${p.email}">${p.email}</a></div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.03 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>${p.phone}</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>${p.location}</div>`;
+
+  // Experience
+  document.getElementById('experience-timeline').innerHTML = SITE_DATA.experience.map(e =>
+    `<div class="timeline-item ${e.current?'current':''}"><div class="timeline-dot"></div><div class="timeline-period">${e.period}</div><div class="timeline-role">${e.role}</div><div class="timeline-sub">${e.area}</div><div class="timeline-inst">${e.institution} · ${e.location}</div></div>`).join('');
+
+  // Education
+  document.getElementById('education-timeline').innerHTML = SITE_DATA.education.map(e =>
+    `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-period">${e.year}</div><div class="timeline-role">${e.icon} ${e.degree}</div><div class="timeline-inst">${e.institution}, ${e.country}${e.grade?' · Grade: '+e.grade:''}</div></div>`).join('');
+
+  // Interests
+  document.getElementById('interests-cloud').innerHTML = SITE_DATA.interests.map(i =>
+    `<span class="interest-tag">${i}</span>`).join('');
+
+  // Skills
+  function renderBars(items, id) {
+    document.getElementById(id).innerHTML = items.map(s =>
+      `<div class="skill-bar-item"><div class="skill-bar-label"><span>${s.name}</span><span>${s.level}%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="${s.level}%" style="width:0"></div></div></div>`).join('');
+  }
+  renderBars(SITE_DATA.skills.programming, 'skills-prog');
+  renderBars(SITE_DATA.skills.tools, 'skills-tools');
+
+  // Service
+  document.getElementById('service-journals').innerHTML = SITE_DATA.service.journals.map(j=>`<li>${j}</li>`).join('');
+  document.getElementById('service-confs').innerHTML = SITE_DATA.service.conferences.map(c=>`<li>${c}</li>`).join('');
+
+  // Publications
+  function renderPubs(filter) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter===filter));
+    const container = document.getElementById('pub-list');
+    container.innerHTML = '';
+    const allByYear = {};
+    [...SITE_DATA.journalPubs.map(p=>({...p,_t:'journal'})),...SITE_DATA.conferencePubs.map(p=>({...p,_t:'conf'}))].forEach(p => {
+      if(filter==='journal' && p._t!=='journal') return;
+      if(filter==='conference' && p._t!=='conf') return;
+      if(!allByYear[p.year]) allByYear[p.year]=[];
+      allByYear[p.year].push(p);
+    });
+    Object.keys(allByYear).sort((a,b)=>b-a).forEach(y => {
+      const ym = document.createElement('div'); ym.className='pub-year-marker'; ym.textContent=y; container.appendChild(ym);
+      allByYear[y].forEach(pub => {
+        const cls = pub._t==='journal'?(pub.jcrQuartile==='Q1'?'q1':'q2'):'conf';
+        const card = document.createElement('div');
+        card.className = `pub-card ${cls} reveal`;
+        card.innerHTML = `<div class="pub-id-badge">${pub.id}</div><div class="pub-body"><div class="pub-title">${pub.title}</div><div class="pub-authors">${authors(pub.authors)}</div><div class="pub-meta-row"><span class="pub-journal">${pub.journal||pub.venue||''}</span>${badges(pub)}${doi(pub.doi)}</div></div>`;
+        container.appendChild(card); obs.observe(card);
+      });
+    });
+    if(filter==='all'||filter==='preprint') {
+      const pm = document.createElement('div'); pm.className='pub-year-marker'; pm.textContent='Preprints & Under Review'; container.appendChild(pm);
+      SITE_DATA.preprintPubs.forEach(pub => {
+        const card = document.createElement('div');
+        card.className = 'pub-card preprint reveal';
+        card.innerHTML = `<div class="pub-id-badge">${pub.id}</div><div class="pub-body"><div class="pub-title">${pub.title}</div><div class="pub-authors">${authors(pub.authors)}</div><div class="pub-meta-row"><span class="pub-journal">${pub.journal||pub.venue||''}</span>${badges(pub)}</div></div>`;
+        container.appendChild(card); obs.observe(card);
+      });
+    }
+  }
+  document.querySelectorAll('.filter-btn').forEach(b => b.addEventListener('click', () => renderPubs(b.dataset.filter)));
+  renderPubs('all');
+
+  // Projects
+  document.getElementById('projects-grid').innerHTML = SITE_DATA.projects.map(proj =>
+    `<div class="project-card reveal">
+      <div class="project-header"><div class="project-accent-bar" style="background:${proj.color}"></div><div class="project-acronym">${proj.acronym}</div><div class="project-fullname">${proj.fullName}</div></div>
+      <div class="project-meta-pills"><span class="pill">🇪🇺 ${proj.funding}</span><span class="pill">💰 ${proj.budget}</span><span class="pill">📅 ${proj.period}</span><span class="pill">🎯 ${proj.role}</span></div>
+      <div class="project-body"><p class="project-abstract">${proj.abstract}</p></div>
+      <div class="project-footer">
+        <div class="project-topics">${proj.topics.map(t=>`<span class="topic-tag">${t}</span>`).join('')}</div>
+        <div class="project-linked-pubs"><div class="project-linked-pubs-label">Linked Publications</div>${proj.linkedPublications.map(id=>`<span class="pub-ref-chip" onclick="scrollToPub('${id}')">${id}</span>`).join('')}</div>
+        ${proj.website&&proj.website!=='#'?`<a class="project-website-link" href="${proj.website}" target="_blank">↗ Project Website</a>`:''}
+      </div>
+    </div>`).join('');
+
+  // Students
+  document.getElementById('students-grid').innerHTML = SITE_DATA.phdStudents.map(s =>
+    `<div class="student-card reveal">
+      <div class="student-header"><div class="student-photo">${s.photo?`<img src="${s.photo}" alt="${s.name}" onerror="this.parentElement.innerHTML='🎓'">`:'🎓'}</div><div><div class="student-name">${s.name}</div><div class="student-degree">PhD Candidate</div><div class="student-inst">${s.institution}</div></div></div>
+      <div class="student-body">
+        <div class="student-thesis">"${s.thesisTopic}"</div>
+        <div class="student-field-row">
+          <div class="student-field"><label>Start Year</label><span>${s.startYear}</span></div>
+          <div class="student-field"><label>Expected Completion</label><span>${s.expectedCompletion}</span></div>
+          <div class="student-field" style="grid-column:1/-1"><label>Funding Agency</label><span>${s.fundingAgency}</span></div>
+        </div>
+        <p class="student-abstract">${s.abstract}</p>
+      </div>
+      <div class="student-footer"><div class="project-linked-pubs"><div class="project-linked-pubs-label">Linked Publications</div>${s.linkedPublications.map(id=>`<span class="pub-ref-chip" onclick="scrollToPub('${id}')">${id}</span>`).join('')}</div></div>
+    </div>`).join('');
+
+  // Observe all reveal elements
+  setTimeout(() => document.querySelectorAll('.reveal').forEach(el => obs.observe(el)), 100);
+
+  // Pub scroll
+  window.scrollToPub = id => {
+    renderPubs('all');
+    document.getElementById('publications').scrollIntoView({behavior:'smooth'});
+    setTimeout(() => {
+      const badge = [...document.querySelectorAll('.pub-id-badge')].find(el=>el.textContent.trim()===id);
+      if(badge) { const card=badge.closest('.pub-card'); card.scrollIntoView({behavior:'smooth',block:'center'}); card.classList.add('ring'); setTimeout(()=>card.classList.remove('ring'),2000); }
+    }, 400);
+  };
+
+});
+</script>
+</body>
+</html>
